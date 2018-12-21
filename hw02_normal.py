@@ -73,3 +73,23 @@ print(u)
 # например, lst = [1, 2, 4, 5, 6, 2, 5, 2], нужно получить lst2 = [1, 2, 4, 5, 6]
 # б) элементы исходного списка, которые не имеют повторений:
 # например, lst = [1 , 2, 4, 5, 6, 2, 5, 2], нужно получить lst2 = [1, 4, 6]
+e = []
+
+for i in range (1, 15, 5):
+    e.append(i)
+e = e * 5
+for i in range (1, 15, 3):
+    e.append(i)
+print(e)
+
+for i in e:
+    if e.count(i) == 1:
+        f.append(i)
+
+
+for i in e :
+    while e.count(i) > 1:
+        e.remove(i)
+
+print(e)
+print(f)
