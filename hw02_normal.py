@@ -52,9 +52,17 @@ else:
 # в диапазоне от -100 до 100. В списке должно быть n - элементов.
 # Подсказка:
 # для получения случайного числа используйте функцию randint() модуля random
+
 import random
+
 n = int(input())
-for i in n+1:
+u = []
+i = 0
+while i < n:
+    w = random.randint(-100, 100)
+    u.append(w)
+    i = i +1
+print(u)
 
 
 
