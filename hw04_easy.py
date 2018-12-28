@@ -27,6 +27,8 @@ c = list(set(a) & set(b))
 c = [x for x in a if x in b]
 print(c)
 
+
+
 # Задание-3:
 # Дан список, заполненный произвольными числами.
 # Получить список из элементов исходного, удовлетворяющих следующим условиям:
@@ -34,7 +36,15 @@ print(c)
 # + Элемент положительный
 # + Элемент не кратен 4
 import random
-b = [random.randint(-100000,10000000) for x in range(10) if x % 3 == 0 and x > 0 and x % 4 != 0]
+
+a = [random.randint(-100000,10000000) for x in range(10)]
+c = []
+b = [x for x in a if x > 0 and x % 3 == 0 and x% 4 != 0]
+for i in a :
+    if i > 0 and i % 3 == 0 and i% 4 != 0:
+        c.append(i)
+print(a)
+print(c)
 print(b)
 
 
