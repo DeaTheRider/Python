@@ -21,13 +21,10 @@ line = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysmNO'\
        'qHFjvihuNGEEFsfnMXTfptvIOlhKhyYwxLnqOsBdGvnuyEZIheApQGOXWeXoLWiDQNJFa'\
        'XiUWgsKQrDOeZoNlZNRvHnLgCmysUeKnVJXPFIzvdDyleXylnKBfLCjLHntltignbQoiQ'\
        'zTYwZAiRwycdlHfyHNGmkNqSwXUrxGc'
-print(re.findall(r"[a-z]+",line))
 
-l = []
-for i in line:
-    if i.islower() == True:
-        l.append(i)
-print(l)
+p = re.findall(r'[A-Z]?([a-z]+)[A-Z]?',line)
+print(p)
+
 
 
 # Задание-2:
@@ -75,15 +72,17 @@ for i in b:
        with open("script", "a", encoding="UTF-8") as create:
               create.write("%s" % i)
 f = open("script","r")
-e = str(f.read())
+
+e = f.read()
 f.close()
-d = re.findall(r"0{2,}|1{2,}|2{2,}|3{2,}|4{2,}|5{2,}|6{2,}|7{2,}|8{2,}|9{2,}|", e)
+
+p
+d = re.findall(r"0{2,}|1{2,}|2{2,}|3{2,}|4{2,}|5{2,}|6{2,}|7{2,}|8{2,}|9{2,}", e)
+
 for i in d:
     if len(str(i))> len(str(max)):
         max = i
 
-
-print(max)
 
 
 
