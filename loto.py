@@ -117,24 +117,22 @@ while d :
             for i, val in enumerate(row):
                 if type(val) == int:
                     e = 1
-
                     break
-    elif e == 0:
+    if e == 0:
         print("Вы проиграли")
         d = False
         break
-    elif w == 0:
+
+    if w == 0:
         for row in Player:
             for i, val in enumerate(row):
                 if type(val) == int:
                     w = 1
                     break
-    elif w == 0:
+    if w == 0:
         print("Вы выграли ")
         d = False
         break
-
-
 
 
 
@@ -151,20 +149,19 @@ while d :
                 if val == b:
                     row[i] = '-'
                     break
+
         c = 0
-        if c != 27:
-            for row in Player:
-                for i, val in enumerate(row):
-                    if val == b:
-                        row[i] = '-'
-
-                    else:
-                        c +=1
-
+        for row in Player:
+            for i, val in enumerate(row):
+                if val == b:
+                    row[i] = '-'
+                else:
+                    c +=1
         if c == 27:
             d = False
             print("Вы проиграли")
             break
+
     elif a == "2":
         for row in Com:
             for i, val in enumerate(row):
