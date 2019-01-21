@@ -134,11 +134,7 @@ def check_on_card(l):
 
 d = True
 
-s = 0
-
 while d :
-    e = 0
-    w = 0
     if check_on_card(Com) == False:
         print("Вы проиграли")
         d = False
